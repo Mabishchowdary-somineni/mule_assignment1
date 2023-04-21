@@ -1,0 +1,17 @@
+#%RAML 1.0 NamedExample
+body:
+  application/json:
+            properties:
+              errorcode:
+                required: true
+                type: integer
+                example: 404
+              errormesssage:
+                type: string
+                required: true
+                example: "Resource not found"
+            example:
+              {
+                "errorcode":404,
+                "errormesssage":"Resource not found"
+              }

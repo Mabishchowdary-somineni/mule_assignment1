@@ -1,0 +1,20 @@
+#%RAML 1.0 NamedExample
+
+  body:
+    application/json:
+            type: object
+            properties:
+              errorcode:
+                required: true
+                type: integer
+                example: 200
+              errormesssage:
+                type: string
+                required: true
+                example: "OK success"
+            example:
+              {
+                "errorcode":200,
+                "errormesssage":"OK success"
+              }
+

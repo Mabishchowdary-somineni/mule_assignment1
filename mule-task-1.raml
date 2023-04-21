@@ -1,0 +1,61 @@
+#%RAML 1.0
+title: Mule-task-1
+/employee:
+  post:
+    description: getting the employeeDetails
+    body:
+      application/json:
+        type: object
+        properties:
+          name:
+            type: string
+            maxLength: 30
+            minLength: 2
+            required: true
+            example: "mabish"
+          rollno:
+            type: number
+            required: true
+            example: 11913440
+          organisation:
+            type: string
+            required: true
+            example: capgemini
+        example:
+          {
+            "name":"mabish",
+            "rollno":11913440,
+            "organisation":"capgemini"
+          }
+    responses:
+      200: !include error-message/200.raml
+
+      400: !include error-message/400.raml
+      
+      404: !include error-message/404.raml
+  get:
+    queryParameters:
+      name:
+        type: string
+        required: true
+        
+    responses:
+      200: !include error-message/200.raml
+        
+      400: !include error-message/400.raml
+        
+      404: !include error-message/404.raml
+    
+          
+        
+
+      
+        
+              
+                  
+                  
+              
+          
+              
+              
+          
